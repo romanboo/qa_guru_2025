@@ -12,14 +12,12 @@ import static com.codeborne.selenide.Selenide.*;
 public class SearchTests {
 
     @Test
-    void successfulSearchTest_Firefox() {
+    void SuccessfulSearchTest_Firefox() {
         Configuration.browser = "firefox";
         open("https://www.google.com/");
         $("[name=q]").setValue("selenide").pressEnter();
         $("[id=search]").shouldHave(text("selenide.org"));
     }
-
-
 
     @Test
     void successfulSearchTest_Selenide() {
