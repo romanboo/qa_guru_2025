@@ -31,8 +31,6 @@ public class LoginTests {
         $("[name=login]").setValue("+7(944)944-07-95").pressEnter();
         $("[name=password]").setValue("Gfhjkm%1234").pressEnter();
         $("[id=mos-dropdown-user]").shouldHave(text(new String("Роман Тестовый".getBytes(), StandardCharsets.UTF_8)));
-
-
     }
 
     @Test
@@ -42,7 +40,6 @@ public class LoginTests {
         $("[name=login]").setValue("test795@test.krlb.ru").pressEnter();
         $("[name=password]").setValue("Gfhjkm%1234").pressEnter();
         $("[id=mos-dropdown-user]").shouldHave(text("Роман Тестовый"));
-
     }
 
     @Test
@@ -52,8 +49,8 @@ public class LoginTests {
         $("[name=login]").setValue("test79@test.krlb.ru").pressEnter();
         $("[name=password]").setValue("Gfhjkm%1234").pressEnter();
         $("[class=blockquote-danger]").shouldHave(text("Введен некорректный логин или пароль"));
-
     }
+
     @Test
     void successfulLoginTestPasswordRequired() {
         open("https://www.mos.ru/");
